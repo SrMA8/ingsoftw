@@ -1,0 +1,144 @@
+srm@pop-os:~$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/srm/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/srm/.ssh/id_rsa
+Your public key has been saved in /home/srm/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:swGLaA601ckR6/vTIljx57KZOmhX/4UbO2aMbDcz0Z4 srm@pop-os
+The key's randomart image is:
++---[RSA 3072]----+
+|     o.          |
+|    o +          |
+| . . =.          |
+|. o..o o         |
+|..o ..+ S   .    |
+| +   ..o = ...   |
+|  . +.. B ooo..  |
+|   + +.+oB X=E   |
+|  . ..+=* =+=    |
++----[SHA256]-----+
+srm@pop-os:~$ cd /home/srm/.ssh
+srm@pop-os:~/.ssh$ ls -la
+total 24
+drwx------  2 srm srm 4096 feb 12 07:45 .
+drwxr-x--- 21 srm srm 4096 feb 11 10:58 ..
+-rw-------  1 srm srm 2590 feb 12 07:45 id_rsa
+-rw-r--r--  1 srm srm  564 feb 12 07:45 id_rsa.pub
+-rw-------  1 srm srm 1956 dic  5 12:18 known_hosts
+-rw-------  1 srm srm 1120 dic  5 12:17 known_hosts.old
+srm@pop-os:~/.ssh$ cat id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCmoFORX/9WHDbiDo0nqhNTIWNjMe3GHSElLLs/JnyLMufMntabJh7+f5wpxuwaJQVQJ3fzY2toJ8gOegcEtY+vHxBrwOYgViMhmnuFVCpQvrsG4Fn97ESxnMwEVgdyJSIbGeDjHuR3+kzuUqs+AfmcGSOt4ahM3d4ugZJllqKzPc/szjFxbk4WBkKPKNeie6lyPAZJ+zttz0OpBc5MFp0/L+lK6Jvh5VELffIS8tDvcYNzeKzw4q1mA2MwJNuJZ3OLPaRF3DNP1zeR+2CKuTtYZv/LHbsusJC3LAEXDKXXYyzoXRTbUgKz6giFY1e/HdX1cd1xdp3z5G/p5xIJQempPLK8OTLViRTyC4ilnaFatq3aqMTTqwxEQkdcpWmvqFqr34w+1TT6Hsxy/wNl340j5P8cF+Z0HYn+barjg+9HOf14gv7aHgUo79ROGISDFFC3NPsqKAwNU0JwqwjLzumO1zzkLrRIelysv6MvaQS8Id12V+pBzw86G7fTUz8+gLU= srm@pop-os
+srm@pop-os:~/.ssh$ cd
+srm@pop-os:~$ cd Documentos/
+srm@pop-os:~/Documentos$ git
+uso: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+Estos son comandos comunes de Git usados en varias situaciones:
+
+comenzar un área de trabajo (mira también: git help tutorial)
+   clone     Clonar un repositorio dentro de un nuevo directorio
+   init      Crear un repositorio de Git vacío o reinicia el que ya existe
+
+trabajar en los cambios actuales (mira también: git help everyday)
+   add       Agregar contenido de archivos al índice
+   mv        Mover o cambiar el nombre a archivos, directorios o enlaces simbólicos
+   restore   Restaurar archivos del árbol de trabajo
+   rm        Borrar archivos del árbol de trabajo y del índice
+
+examinar el historial y el estado (mira también: git help revisions)
+   bisect    Usar la búsqueda binaria para encontrar el commit que introdujo el bug
+   diff      Mostrar los cambios entre commits, commit y árbol de trabajo, etc
+   grep      Imprimir las líneas que concuerden con el patrón
+   log       Mostrar los logs de los commits
+   show      Mostrar varios tipos de objetos
+   status    Mostrar el estado del árbol de trabajo
+
+crecer, marcar y ajustar tu historial común
+   branch    Listar, crear, o borrar ramas
+   commit    Grabar los cambios al repositorio
+   merge     Juntar dos o más historiales de desarrollo juntos
+   rebase    Volver a aplicar commits en la punta de otra rama
+   reset     Reiniciar el HEAD actual a un estado específico
+   switch    Cambiar de branch
+   tag       Crear, listar, borrar o verificar un objeto de tag firmado con GPG
+
+colaborar (mira también: git help workflows)
+   fetch     Descargar objetos y referencias de otro repositorio
+   pull      Realizar un fetch e integra con otro repositorio o rama local
+   push      Actualizar referencias remotas junto con sus objetos asociados
+
+'git help -a' y 'git help -g' listan los subcomandos disponibles y algunas
+guías de concepto. Consulta 'git help <command>' o 'git help <concepto>'
+para leer sobre un subcomando o concepto específico.
+Mira 'git help git' para una vista general del sistema.
+srm@pop-os:~/Documentos$ git clone git@github.com:SrMA8/ingsoftw.git
+Clonando en 'ingsoftw'...
+The authenticity of host 'github.com (140.82.112.3)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+warning: Pareces haber clonado un repositorio sin contenido.
+srm@pop-os:~/Documentos$ ls
+ Calculadora.pdf   Documentacion_eje.odt    ingsoftw
+'Curso PHP.odt'    Documentacion_eje.pdf   'Saber si eres un burro.odt'
+ Curso_PHP.dotx    Elemento_celestial.odt   VPS.odt
+srm@pop-os:~/Documentos$ cd ingsoftw/
+srm@pop-os:~/Documentos/ingsoftw$ code.
+code.: orden no encontrada
+srm@pop-os:~/Documentos/ingsoftw$ code .
+srm@pop-os:~/Documentos/ingsoftw$ git status
+En la rama main
+
+No hay commits todavía
+
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que será confirmado)
+	index.html
+
+no hay nada agregado al commit pero hay archivos sin seguimiento presentes (usa "git add" para hacerles seguimiento)
+srm@pop-os:~/Documentos/ingsoftw$ git add -A
+srm@pop-os:~/Documentos/ingsoftw$ git status
+En la rama main
+
+No hay commits todavía
+
+Cambios a ser confirmados:
+  (usa "git rm --cached <archivo>..." para sacar del área de stage)
+	nuevos archivos: index.html
+
+srm@pop-os:~/Documentos/ingsoftw$ git commit -m "Mi primer commit con un index.html y ssh"
+[main (commit-raíz) 297521a] Mi primer commit con un index.html y ssh
+ Committer: SrM <srm@pop-os.localdomain>
+Tu nombre y correo fueron configurados automáticamente basados
+en tu usuario y nombre de host. Por favor verifica que sean correctos.
+Tú puedes suprimir este mensaje configurándolos de forma explícita. Ejecuta el
+siguiente comando y sigue las instrucciones de tu editor
+ para modificar tu archivo de configuración:
+
+    git config --global --edit
+
+Tras hacer esto, puedes arreglar la identidad usada para este commit con:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 11 insertions(+)
+ create mode 100644 index.html
+srm@pop-os:~/Documentos/ingsoftw$ git push origin main
+Enumerando objetos: 3, listo.
+Contando objetos: 100% (3/3), listo.
+Compresión delta usando hasta 8 hilos
+Comprimiendo objetos: 100% (2/2), listo.
+Escribiendo objetos: 100% (3/3), 394 bytes | 394.00 KiB/s, listo.
+Total 3 (delta 0), reusados 0 (delta 0), pack-reusados 0
+To github.com:SrMA8/ingsoftw.git
+ * [new branch]      main -> main
+srm@pop-os:~/Documentos/ingsoftw$ 
+
